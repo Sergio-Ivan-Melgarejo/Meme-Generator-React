@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+:root{
+  --color-1: #191A19;
+  --color-2: #1E5128;
+  --color-3: #4E9F3D;
+  --color-4: #D8E9A8;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: var(--color-1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App{
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*parte 1________*/
+.creando{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  padding: 20px 10px 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.linea1C, .linea2C, .select-img, .btaExportar{
+  width: 90vw;
+  max-width: 500px;
+  outline-color: var(--color-2);
+  color: var(--color-4);
+  background-color: var(--color-3);
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  display: block;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.linea1C::placeholder, .linea2C::placeholder{
+  color: var(--color-4);
+}
+
+.btaExportar{
+  color: var(--color-3);
+  font-weight: bold;
+  background-color: var(--color-2);
+  text-transform: uppercase;
+  transition: color 350ms, background-color 350ms;
+}
+
+.btaExportar:hover{
+  color: var(--color-4);
+  background-color: var(--color-3);
+  cursor: pointer;
+}
+
+/*parte 2________*/
+.resultado{
+  position: relative;
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.linea1R, .linea2R{
+  position: absolute;
+  color: #fff;
+  text-shadow: 0 0 3px black, 0 0 3px #000000, 0 0 3px #000000, 0 0 3px #000000;
+  font-size: 2em;
+  left: 50%;
+  transform: translate(-50%);
+  word-break: break-all;
+  width: 95%;
+  
+}
+.linea1R{
+  top: 30px;
+ }
+.linea2R{
+ bottom: 30px;
+}
+
+.imagen{
+  width: 100%;
+  max-width: 500px;
 }
